@@ -2,7 +2,7 @@
 
 require 'Test.More'
 
-plan(32)
+plan(33)
 
 local mp = require 'MessagePack'
 
@@ -67,4 +67,10 @@ is( mp.unpack(table.concat(buffer)), 0)
 buffer = {}
 mp.packers.double(buffer, 0)
 is( mp.unpack(table.concat(buffer)), 0)
+
+do
+  local mpac = mp.pack("text")
+  _, pos = mp.unpack(mpac .. "more", true)
+  is(#mpac + 1, pos)
+end
 

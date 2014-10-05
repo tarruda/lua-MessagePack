@@ -1063,12 +1063,15 @@ local function cursor_loader (ld)
     }
 end
 
-function m.unpack (s)
+function m.unpack (s, ignore_extra)
     checktype('unpack', 1, s, 'string')
     local cursor = cursor_string(s)
     local data = unpackers['any'](cursor)
+    if ignore_extra then
+      return data, cursor.i
+    end
     if cursor.i < cursor.j then
-        error "extra bytes"
+      error "extra bytes"
     end
     return data
 end
