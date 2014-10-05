@@ -1,9 +1,8 @@
 package = 'lua-MessagePack'
 version = '0.3.1-1'
 source = {
-    url = 'https://github.com/tarruda/lua-MessagePack/archive/add-ignore_extra-option-to-unpack.tar.gz',
-    md5 = '0b494730d0b84830349e152a925cbb40',
-    dir = 'lua-MessagePack-add-ignore_extra-option-to-unpack',
+    url = 'git://github.com/tarruda/lua-MessagePack',
+    tag = 'unpack'
 }
 description = {
     summary = "a pure Lua implementation of the MessagePack serialization format",
