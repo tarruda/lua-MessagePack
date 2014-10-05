@@ -1,8 +1,8 @@
 package = 'lua-MessagePack'
 version = '0.3.1-1'
 source = {
-    url = 'http://sites.google.com/site/fperrad/lua-messagepack-0.3.1.tar.gz',
-    md5 = '3b11cbd32c9dfe3bbc493eae33ab8cab',
+    url = 'https://github.com/tarruda/lua-MessagePack/archive/add-ignore_extra-option-to-unpack.tar.gz',
+    md5 = '0b494730d0b84830349e152a925cbb40',
     dir = 'lua-MessagePack-0.3.1',
 }
 description = {
